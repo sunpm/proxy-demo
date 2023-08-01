@@ -1,13 +1,13 @@
 <script setup lang="ts">
-await useFetch('/api/proxy/bbs/app/users', {
-  lazy: true,
-  key: 'IndexData',
-  method: 'POST',
-})
+function demo() {
+  navigateTo('/demo/123')
+}
 </script>
 
 <template>
-  213423
+  <button @click="demo">
+    跳转页面请求接口
+  </button>
 </template>
 
 <style scoped>
