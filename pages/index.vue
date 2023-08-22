@@ -1,13 +1,20 @@
 <script setup lang="ts">
-function demo() {
-  navigateTo('/demo/123')
-}
+onMounted(async () => {
+  const {data, error} = await useFetch('https://www.baidu.com/index/index', {
+    method: 'post',
+    headers: {
+      'Content-Type': 'application/x-www-form-urlencoded;charset=UTF-8',
+    },
+    body: {
+      adb: 123,
+      adb2: 123,
+    },
+  })
+})
 </script>
 
 <template>
-  <button @click="demo">
-    跳转页面请求接口
-  </button>
+
 </template>
 
 <style scoped>
